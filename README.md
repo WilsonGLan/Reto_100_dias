@@ -5,5 +5,9 @@ El objetivo de este repositorio es almacenar los diferentes ejercicios y proyect
 
 Día 1:
 
-Comenzando por lo más basico que es imprimir en pantalla mensajes y aprender a usar variables.
+Comenzando por lo más básico que es imprimir en pantalla mensajes y aprender a usar variables.
 Proyecto final: Un generador de nombres de bandas usando el nombre de una ciudad y una mascota.
+
+Dia 2:
+Se repasan las variables y el tipo de datos, tambien se trabaja sobre el formateo de string (f-String) y operaciones matemáticas básicas.
+Proyecto final: Realizar una calculadora que muestre como resultado cuanto debe pagar una persona en el restaurante al dividir la cuenta total más un porcentaje de propina dividido entre el número de personas que pagan la cuenta.
