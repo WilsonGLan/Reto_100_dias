@@ -4,7 +4,6 @@ Reto de programar por 100 días desde lo más básico
 El objetivo de este repositorio es almacenar los diferentes ejercicios y proyectos del curso de reto de programar por 100 días.
 
 Día 1:
-
 Comenzando por lo más básico que es imprimir en pantalla mensajes y aprender a usar variables.
 Proyecto final: Un generador de nombres de bandas usando el nombre de una ciudad y una mascota.
 
@@ -15,4 +14,9 @@ Proyecto final: Realizar una calculadora que muestre como resultado cuanto debe 
 Día 3:
 Se trabaja con diferentes ejercicios usando la condicioal if, elif, else, teniendo en cuenta la anidación. En uno de los ejercicios se introdujo la función lower() para convertir a minusculas el string y la función count() para contar el número de caracteres encontrados según el caracter buscado.
 Proyecto final: Un juego cuyo objetivo es ganar encontrando un tesoro y para ello debe elegir un camino, como cruzar un rio y escoger una puerta.
-<br> Tener en cuenta modificar el juego con más elecciones.
+
+Tener en cuenta modificar el juego con más elecciones.
+
+Día 4:
+Se hacen ejercicios de random o elementos aleatorios y listas. 
+Proyecto final: se crea un juego de piedra, papel o tijera.
