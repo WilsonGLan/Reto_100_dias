@@ -20,3 +20,7 @@ Tener en cuenta modificar el juego con más elecciones.
 Día 4:
 Se hacen ejercicios de random o elementos aleatorios y listas. 
 Proyecto final: se crea un juego de piedra, papel o tijera.
+
+Día 5:
+Los ejercicios van enfocados a usar el ciclo for con funciones del modulo random para desordenar listas.
+Proyecto final: Un programa que genere contraseñas a partir de una determinada cantidad de letras, numeros y simbolos que el usuario solicita.
