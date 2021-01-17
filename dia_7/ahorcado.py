@@ -1,86 +1,23 @@
 import random as r
+import arte_ahorcado as art
+import palabras_ahorcado as p
 
-# Se crea una lista visual de las vidas que le quedan al ahorcado
-lives = ('''    
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-      |
-==========
-''', '''    
-  +---+
-  |   |
-  0   |
-      |
-      |
-      |
-      |
-==========
-''', '''    
-  +---+
-  |   |
-  0   |
-  |   |
-      |
-      |
-      |
-==========
-''', '''    
-  +---+
-  |   |
-  0   |
- /|   |
-      |
-      |
-      |
-==========
-''', '''    
-  +---+
-  |   |
-  0   |
- /|\  |
-      |
-      |
-      |
-==========
-''', '''    
-  +---+
-  |   |
-  0   |
- /|\  |
- /    |
-      |
-      |
-==========
-''', '''    
-  +---+
-  |   |
-  0   |
- /|\  |
- / \  |
-      |
-      |
-==========
-''')
+print(art.logo,'\n')
 
 lost_lives = 0
 
 ahorcado=[]
 # 1. Crear una lista de palabras para adivinar
-word_list=['trabajando', 'biblioteca', 'fabrica']
 # 2. Seleccionar aleatoriamente una palabra de la lista anterior.
 #    Se valida el tamaño de la palabra y se agregan los '_' dentro de la variable
 #    ahorcado para visualizar de cuantas letras se compone la palabra.
-chosen_word = r.choice(word_list)
+chosen_word = r.choice(p.word_list)
 word_length = len(chosen_word)
 
 for _ in range(word_length):
   ahorcado += '_'
-print('La solución es:',chosen_word)
-print(f"{' '.join(ahorcado)}")
+print(f'La solución es: {chosen_word}\n')
+print(f"{' '.join(ahorcado)}\n")
 # 3. Solicitar adivinar una de las letras y asegurarse de que sea minúscula
 #    El juego debe finalizar solo cuando no hayan espacios, osea cuando se adivine
 #    la palabra completa.
@@ -97,9 +34,9 @@ while lost_lives < 6 and '_' in ahorcado:
         ahorcado[position] = letter        
   else:
     lost_lives +=1    
-  print(lives[lost_lives])
-  print(f"{' '.join(ahorcado)}")
-  print("=======================")
+  print(art.lives[lost_lives],'\n')
+  print(f"{' '.join(ahorcado)}\n")
+  print("=======================\n")
 
 if '_' not in ahorcado:
   print('You Win')
