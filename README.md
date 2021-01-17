@@ -24,3 +24,9 @@ Proyecto final: se crea un juego de piedra, papel o tijera.
 Día 5:
 Los ejercicios van enfocados a usar el ciclo for con funciones del modulo random para desordenar listas.
 Proyecto final: Un programa que genere contraseñas a partir de una determinada cantidad de letras, numeros y simbolos que el usuario solicita.
+
+Dia 6: 
+Sin archivos de ejercicios.
+
+Dia 7: 
+La idea es realizar el juego del ahorcado usando los ciclos for, se utiliza la función lower() para asegurar que lo que ingrese el usuario esta en minúscula.
