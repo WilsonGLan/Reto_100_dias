@@ -1,32 +1,20 @@
-'''
-We've written it using the following assumptions:
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-it accepts Latin letters only (note: the Romans used neither whitespaces nor digits)
-all letters of the message are in upper case (note: the Romans knew only capitals)
-Let's trace the code:
+def encrypt(text_send, number_shift):
+  cipher_text=''
+  for i in range(0,len(text_send)):
+    if text_send[i] in alphabet:
+      cipher_text += alphabet[alphabet.index(text_send[i])+number_shift]      
+    else:
+      cipher_text += text_send[i]
+  print(f'The encoded text is: {cipher_text}')
 
-line 02: ask the user to enter the open (unencrypted), one-line message;
-line 03: prepare a string for an encrypted message (empty for now)
-line 04: start the iteration through the message;
-line 05: if the current character is not alphabetic...
-line 06: ...ignore it;
-line 07: convert the letter to upper-case (it's preferable to do it blindly, rather than check whether it's needed or not)
-line 08: get the code of the letter and increment it by one;
-line 09: if the resulting code has "left" the Latin alphabet (if it's greater than the Z code)...
-line 10: ...change it to the A code;
-line 11: append the received character to the end of the encrypted message;
-line 13: print the cipher.
-'''
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
 
-text = input("Enter your message: ")
-cipher = ''
-for char in text:
-    if not char.isalpha():
-        continue
-    char = char.upper()
-    code = ord(char) + 1
-    if code > ord('Z'):
-        code = ord('A')
-    cipher += chr(code)
-
-print(cipher)
+if direction == 'encode':
+  encrypt(text, shift)
+else:
+  print('por ahora no se ha trabajado en esta función')
