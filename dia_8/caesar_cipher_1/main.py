@@ -14,7 +14,7 @@ def caesar (choice_direction, text_send, number_shift):
         cipher_text += alphabet[alphabet.index(text_send[i])-number_shift]
     else:
       cipher_text += text_send[i]
-  print(f'The encoded text is: {cipher_text}')
+  print(f'The {choice_direction}d text is: {cipher_text}')
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
 text = input("Type your message:\n").lower()
