@@ -37,3 +37,7 @@ Proyecto: El proyecto trabaja un juego llamado "El ahorcado", las reglas del jue
     4. Se debe visualizar por medio de un dibujo las vidas restantes.
     5. Se debe visualizar los espacios en blanco que faltan por adivinar.
 
+Dia 8. Se realizan ejercicios practicos para el uso de las funciones con parametros. 
+Proyecto: Realizar un programa que encripte y desencripte un mensaje. La idea del ejercicio esta basado en el cifrado de cesar o "Caesar Cipher" y se trata de solicitar al usuario que primero diga si requiere codificar o decodificar un mensaje, luego que ingrese un numero que serviera de base para realizar el cambio de caracteres en el mensaje y quede encriptado o desencriptado; por último ingresar el mensaje. El proyecto se realiza por fases en la primera se crea una función para el encriptamiento, en la segunda otra función para el desencriptamiento, en la tercera se mejora el codigo uniendo ambas funciones en una eliminando el código innecesario.
+
+Día 9. El tema de los ejercicios propuestos para este día es el uso de los diccionarios de python.
