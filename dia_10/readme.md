@@ -1,13 +1,14 @@
-# ** Funciones Utilizadas**
-
+#  Funciones Utilizadas
+---
 * title()  utilizada para capitalizar o colocar la primera letra en mayúscula y las demas letras en minuscula de un string o mensaje. No necesita importar modulos.
 
 * return Utilizado para entregar un resultado dentro de una función. No necesita importar modulos.
 
 
-# ** PSEUDOCODIGO **
-
+#  PSEUDOCODIGO
+---
 * ejercicio 2: Imprimir días en el mes con el metodo days_in_month(year,month). La función tiene una lista de los dias de cada mes cuando el año no es biciesto.
+
 
 ```
 Funcion result_leap <- is_leap ( year )
