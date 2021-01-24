@@ -9,7 +9,7 @@
 
 * ejercicio 2: Imprimir días en el mes con el metodo days_in_month(year,month). La función tiene una lista de los dias de cada mes cuando el año no es biciesto.
 
-´´´
+```
 Funcion result_leap <- is_leap ( year )
 	Si year % 4 = 0 Entonces
 		Si year % 100 = 0 Entonces
@@ -63,5 +63,4 @@ Algoritmo primos
 	resultado <- is_leap(num_year)
 	Escribir  days_in_month(num_year, num_month)	
 FinAlgoritmo
-
-´´´
+```
