@@ -1,5 +1,5 @@
 #Calculator
-
+from art import logo 
 #Add
 def add(n1,n2):
     """Return the sum of two numbers"""
@@ -28,6 +28,7 @@ operations = {
 }
 
 def calculator():
+    print(logo)
     num1 = int(input("What's the first number?: "))
 
     for symbol in operations:
