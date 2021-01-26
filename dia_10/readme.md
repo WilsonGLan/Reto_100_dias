@@ -65,3 +65,6 @@ Algoritmo primos
 	Escribir  days_in_month(num_year, num_month)	
 FinAlgoritmo
 ```
+### Proyecto:
+
+Realizar una calculadora que realice las operaciones de la suma, resta, multiplicación y división. Cada parte de la operación será solicitado e ingresado por aparte. Se realiza el calculo entre dos numeros y si se desea seguir realizando mas operaciones teniendo en cuenta el resultado anterior, solo se solicitará el siguiente operador y operando para calcular realizar la operación con el resultado anterior.

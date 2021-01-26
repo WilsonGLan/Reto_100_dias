@@ -28,17 +28,5 @@ Proyecto final: Un programa que genere contraseñas a partir de una determinada 
 Dia 6: 
 Sin archivos de ejercicios.
 
-Dia 7: 
-No se realizan ejercicios previos por lo que solo se va a trabajar el proyecto por partes.La idea es realizar el juego del ahorcado usando los ciclos for y while, se utiliza la función lower() para asegurar que lo que ingrese el usuario esta en minúscula. Tambien se trabaja separando el código en archivos que sirven como modulos que se importarán en el principal para hacer uso de los elementos que contienen. 
-Proyecto: El proyecto trabaja un juego llamado "El ahorcado", las reglas del juego son:
-    1. Se tienen 6 vidas, osea que solo se permiten máximo 6 fallas.
-    2. El usuario debe ir ingresando las letras cada vez que el programa lo solicite para completar la palabra
-    3. Gana si completa la palabra, de lo contrario pierde.
-    4. Se debe visualizar por medio de un dibujo las vidas restantes.
-    5. Se debe visualizar los espacios en blanco que faltan por adivinar.
-
-Dia 8. Se realizan ejercicios practicos para el uso de las funciones con parametros. 
-Proyecto: Realizar un programa que encripte y desencripte un mensaje. La idea del ejercicio esta basado en el cifrado de cesar o "Caesar Cipher" y se trata de solicitar al usuario que primero diga si requiere codificar o decodificar un mensaje, luego que ingrese un numero que serviera de base para realizar el cambio de caracteres en el mensaje y quede encriptado o desencriptado; por último ingresar el mensaje. El proyecto se realiza por fases en la primera se crea una función para el encriptamiento, en la segunda otra función para el desencriptamiento, en la tercera se mejora el codigo uniendo ambas funciones en una eliminando el código innecesario.
-
-Día 9. El tema de los ejercicios propuestos para este día es el uso de los diccionarios de python.
-Proyecto: Se propone realizar un un programa que simule una subasta. Debe solicitar el nombre de la persona que oferta y el valor ofertado; y despues debe preguntar si hay otra persona que quiere ofertar, si es así entonces borra la pantalla y vuelve a realizar las mismas preguntas. Los datos se deben guardar en un diccionario en donde el nombre es la clave y la oferta es el valor. Cuando finalicen de ofertar se debe mostrar al ganador quien es la persona que oferto con el maximo valor. 
+#### Nota:
+La descripción de los ejercicios de los demás días lo haré por medio de un readme por cada día de reto.
