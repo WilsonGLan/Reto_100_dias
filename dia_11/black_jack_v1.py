@@ -61,6 +61,7 @@
 
 import random as r
 import art as a
+import  cleaning as cl
 
 def deal_card():
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
@@ -139,7 +140,7 @@ def play_game():
         computer_cards.append(deal_card())
 
     while not game_over:
-
+        cl.clean_screen()
         score_user = calculate_score(user_cards)
         score_computer = calculate_score(computer_cards)
         print(a.logo)
@@ -169,7 +170,9 @@ def play_game():
     print(
         f"    Computer first card: {computer_cards}, current score {score_computer}")
 
-
+cl.clean_screen()
+print(a.logo)
 while input("Do you want to play a game BlackJack? Type 'y' or 'n': ") == 'y':
+    cl.clean_screen()
     play_game()
 
