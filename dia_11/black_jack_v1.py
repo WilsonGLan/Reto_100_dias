@@ -60,7 +60,8 @@
 # Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 
 import random as r
-from replit import clear
+from platform import system as sys
+from os import system
 
 def deal_card():
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
@@ -80,19 +81,54 @@ def calculate_score(hand):
 
 def compare(score_user, score_computer):
     if score_user == score_computer:
-        return "Draw"
+        message = """
+        ============================================
+        =       DRAW                               =
+        ============================================
+        """
+        return message
     elif score_computer == 0:
-        return "You Lose, opponent has BlackJack"
+        message = """
+        ============================================
+        =       You Lose, opponent has BlackJack   =
+        ============================================
+        """
+        return message
     elif score_user == 0:
-        return "You win, with a BlackJack"
+        message = """
+        ============================================
+        =       You win, with a BlackJack          =
+        ============================================
+        """
+        return message
     elif score_user > 21:
-        return "You went over. You lose"
+        message = """
+        ============================================
+        =       You went over. You lose            =
+        ============================================
+        """
+        return message
     elif score_computer > 21:
-        return "Opponent went over. You win"
+        message = """
+        ============================================
+        =       Opponent went over. You win        =
+        ============================================
+        """
+        return message
     elif score_user > score_computer:
-        return "You win"
+        message = """
+        ============================================
+        =       You win                            =
+        ============================================
+        """
+        return message
     else:
-        return "You lose"
+        message = """
+        ============================================
+        =       You lose                           =
+        ============================================
+        """
+        return message
 
 def play_game():
     user_cards = []
@@ -135,6 +171,10 @@ def play_game():
         f"    Computer first card: {computer_cards}, current score {score_computer}")
 
 
-while input("Do you want to play a game BlackJack? Type 'y' or 'n': "):
-    clear()
+while input("Do you want to play a game BlackJack? Type 'y' or 'n': ") == 'y':
+    if sys() == 'Linux':        
+        system("clear")
+    else:        
+        system("cls")
     play_game()
+
