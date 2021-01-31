@@ -60,8 +60,6 @@
 # Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 
 import random as r
-from platform import system as sys
-from os import system
 import art as a
 
 def deal_card():
@@ -173,9 +171,5 @@ def play_game():
 
 
 while input("Do you want to play a game BlackJack? Type 'y' or 'n': ") == 'y':
-    if sys() == 'Linux':        
-        system("clear")
-    else:        
-        system("cls")
     play_game()
 
