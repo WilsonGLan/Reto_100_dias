@@ -12,7 +12,7 @@
 # The Jack/Queen/King all count as 10.
 # The the Ace can count as 11 or 1.
 # Use the following list as the deck of cards:
-## cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+# cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 # The cards in the list have equal probability of being drawn.
 # Cards are not removed from the deck as they are drawn.
 # The computer is the dealer.
@@ -33,11 +33,11 @@
 
 # Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
 # 11 is the Ace.
-#cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+# cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 # Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
-#user_cards = []
-#computer_cards = []
+# user_cards = []
+# computer_cards = []
 
 # Hint 6: Create a function called calculate_score() that takes a List of cards as input
 # and returns the score.
@@ -62,52 +62,49 @@
 import random as r
 from replit import clear
 
+def deal_card():
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    return r.choice(cards)
+
+def calculate_score(hand):
+    score = 0
+    if sum(hand) > 21 and 11 in hand:
+        hand.remove(11)
+        hand.append(1)
+        score = sum(hand)
+    elif sum(hand) == 21 and len(hand) == 2:
+        score = 0
+    else:
+        score = sum(hand)
+    return score
+
+def compare(score_user, score_computer):
+    if score_user == score_computer:
+        return "Draw"
+    elif score_computer == 0:
+        return "You Lose, opponent has BlackJack"
+    elif score_user == 0:
+        return "You win, with a BlackJack"
+    elif score_user > 21:
+        return "You went over. You lose"
+    elif score_computer > 21:
+        return "Opponent went over. You win"
+    elif score_user > score_computer:
+        return "You win"
+    else:
+        return "You lose"
+
 def play_game():
     user_cards = []
     computer_cards = []
-    score_user = 0
-    score_computer = 0
     game_over = False
-
-    def deal_card():
-        cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-        return r.choice(cards)
-
-    def compare(score_user, score_computer):
-        if score_user == score_computer:
-            return "Draw"
-        elif score_computer == 0:
-            return "You Lose, opponent has BlackJack"
-        elif score_user == 0:
-            return "You win, with a BlackJack"
-        elif score_user > 21:
-            return "You went over. You lose"
-        elif score_computer > 21:
-            return "Opponent went over. You win"
-        elif score_user > score_computer:
-            return "You win"
-        else:
-            return "You lose"
-        
-
-    def calculate_score(hand):
-        score = 0
-        if sum(hand) > 21 and 11 in hand:
-            hand.remove(11)
-            hand.append(1)
-            score = sum(hand)
-        elif sum(hand) == 21 and len(hand) == 2:
-            score = 0
-        else:
-            score = sum(hand)
-        return score
 
     for i in range(2):
         user_cards.append(deal_card())
         computer_cards.append(deal_card())
 
     while not game_over:
-        
+
         score_user = calculate_score(user_cards)
         score_computer = calculate_score(computer_cards)
 
@@ -134,9 +131,10 @@ def play_game():
         score_computer = 21
     elif score_user == 0:
         score_user = 21
-    print(f"    Computer first card: {computer_cards}, current score {score_computer}")
+    print(
+        f"    Computer first card: {computer_cards}, current score {score_computer}")
+
 
 while input("Do you want to play a game BlackJack? Type 'y' or 'n': "):
     clear()
     play_game()
-
