@@ -163,12 +163,7 @@ def play_game():
     print(compare(score_user, score_computer))
 
     print(f"    Your Cards: {user_cards}, current score {score_user} ")
-    if score_computer == 0:
-        score_computer = 21
-    elif score_user == 0:
-        score_user = 21
-    print(
-        f"    Computer first card: {computer_cards}, current score {score_computer}")
+    print(f"    Computer first card: {computer_cards}, current score {score_computer}")
 
 cl.clean_screen()
 print(a.logo)
