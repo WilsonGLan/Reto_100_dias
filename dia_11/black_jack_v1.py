@@ -62,6 +62,7 @@
 import random as r
 from platform import system as sys
 from os import system
+import art as a
 
 def deal_card():
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
@@ -143,7 +144,7 @@ def play_game():
 
         score_user = calculate_score(user_cards)
         score_computer = calculate_score(computer_cards)
-
+        print(a.logo)
         print(f"    Your Cards: {user_cards}, current score {score_user} ")
         print(f"    Computer first card: {computer_cards[0]}")
 
