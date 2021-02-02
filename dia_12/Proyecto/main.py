@@ -1,4 +1,5 @@
 import random as r
+import art as a
 
 adivinar_numero = r.randrange(1,100)
 
@@ -29,7 +30,7 @@ def adivinar(x):
             elif adivinar_numero != numero_jugador and intentos == x-1:
                 print("You've run out of guesses, you lose.")
 
-
+print(a.logo)
 print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100")
 #print(f"Pssst, the correct answer is {adivinar_numero}")
