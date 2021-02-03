@@ -9,7 +9,7 @@ def dificultad():
     elif modo_juego == 'hard':
         adivinar(5)
     else:
-        "No existe esa opción"
+        "Option wrong"
 
 def adivinar(x):
     numero_jugador = 0
@@ -22,9 +22,9 @@ def adivinar(x):
                 print(f"You got it! The answer was {adivinar_numero}.")
                 break
             elif adivinar_numero > numero_jugador:
-                print("Muy bajo")                
+                print("Too low")                
             elif adivinar_numero < numero_jugador:
-                print("Muy alto")                
+                print("Too high")                
             if adivinar_numero != numero_jugador and intentos < x-1:
                 print("Guess again")
             elif adivinar_numero != numero_jugador and intentos == x-1:
