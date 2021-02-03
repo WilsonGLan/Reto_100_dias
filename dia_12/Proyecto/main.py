@@ -19,7 +19,7 @@ def adivinar(x):
         numero_jugador = int(input("Make a guess:\t"))
         if intentos < x:
             if adivinar_numero == numero_jugador:
-                print("You got it! The answer was 82.")
+                print(f"You got it! The answer was {adivinar_numero}.")
                 break
             elif adivinar_numero > numero_jugador:
                 print("Muy bajo")                
