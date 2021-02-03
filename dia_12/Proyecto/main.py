@@ -12,8 +12,7 @@ def dificultad():
         "Option wrong"
 
 def adivinar(x):
-    numero_jugador = 0
-    mensaje=""
+    numero_jugador = 0    
     for intentos in range(0,x):
         print(f"You have {x-intentos} attempts remaining to guess the number.")
         numero_jugador = int(input("Make a guess:\t"))
