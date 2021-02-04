@@ -1,4 +1,5 @@
-lista_numeros = []
+primos_numero_uno = []
+primos_numero_dos = []
 
 print("Calculadora de Minimo Común Multiplo y Mínimo Común Divisor")
 print("""
@@ -14,16 +15,10 @@ print("""
 )
 opcion = int(input("Que opción del menú de operaciones selecciona:\t"))
 if opcion in [1,2]:
-    numero = int(input("Ingrese el primer número\t"))
-    lista_numeros.append(numero)
-    numero = int(input("Ingrese el segundo número\t"))
-    lista_numeros.append(numero)
-    continuar = input("¿Quiere ingresar más números? Escriba 'Si' o 'No' para continuar:\t")
-
-    while continuar.upper() != 'NO':
-        numero = int(input("Ingrese el siguiente número\t"))
-        lista_numeros.append(numero)
-        continuar = input("¿Quiere ingresar más números? Escriba 'Si' o 'No' para continuar:\t")
+    numero_uno = int(input("Ingrese el primer número\t"))    
+    numero_dos = int(input("Ingrese el segundo número\t"))        
 else:
     print("error")
+
+#Descomponer los numeros ingresados en factores primos
 
