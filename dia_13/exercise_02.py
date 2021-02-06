@@ -17,16 +17,14 @@ def lista_primos(numero_dividendo):
 def divisores_primos(numero_dividendo):
     numero_cociente = numero_dividendo
     lista_primos = []
-    for numero_divisor in range(2,numero_dividendo+1):
-        if numero_dividendo % numero_divisor == 0:
-            es_primo = evaluar_primos(numero_divisor)         
-            while es_primo:                        
-                lista_primos.append(numero_divisor)
-                numero_cociente = numero_cociente / numero_divisor
-                if numero_cociente % numero_divisor != 0:
-                    es_primo = False
-            if numero_cociente == 0:
+    for numero_divisor in range(2,numero_dividendo+1):            
+        while numero_dividendo % numero_divisor == 0:                        
+            lista_primos.append(numero_divisor)
+            numero_cociente = numero_cociente / numero_divisor
+            if numero_cociente % numero_divisor != 0:                
                 break
+        if numero_cociente == 0:
+            break
     return lista_primos
 
 def factores_primos(numero_dividendo):
