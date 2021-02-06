@@ -4,7 +4,7 @@ def evaluar_primos(numero):
             return False                        
     return True
 
-""" def lista_primos(numero_dividendo):
+def lista_primos(numero_dividendo):
     primos=[]
     for numero_divisor in range(2, numero_dividendo):
         if numero_dividendo >= 2 and numero_dividendo % numero_divisor == 0 :
@@ -12,7 +12,7 @@ def evaluar_primos(numero):
                 primos.append(numero_divisor)
             elif evaluar_primos(numero_divisor):
                 primos.append(numero_divisor)
-    return primos """
+    return primos
 
 def divisores_primos(numero_dividendo):
     numero_cociente = numero_dividendo
@@ -32,4 +32,4 @@ def divisores_primos(numero_dividendo):
 numero = int(input("Ingrese un numero:\t"))
 #print(divisores_primos(numero))
 print(divisores_primos(numero))
-#print(lista_primos(numero))
+print(lista_primos(numero))
