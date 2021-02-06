@@ -6,7 +6,7 @@ def evaluar_primos(numero):
 
 def lista_primos(numero_dividendo):
     primos=[]
-    for numero_divisor in range(2, numero_dividendo):
+    for numero_divisor in range(2, numero_dividendo+1):
         if numero_dividendo >= 2 and numero_dividendo % numero_divisor == 0 :
             if numero_divisor in [2,3]:
                 primos.append(numero_divisor)
@@ -17,7 +17,7 @@ def lista_primos(numero_dividendo):
 def divisores_primos(numero_dividendo):
     numero_cociente = numero_dividendo
     lista_primos = []
-    for numero_divisor in range(2,numero_dividendo):
+    for numero_divisor in range(2,numero_dividendo+1):
         if numero_dividendo % numero_divisor == 0:
             es_primo = evaluar_primos(numero_divisor)         
             while es_primo:                        
@@ -29,7 +29,17 @@ def divisores_primos(numero_dividendo):
                 break
     return lista_primos
 
+def factores_primos(numero_dividendo):
+    factores_unicos = lista_primos(numero_dividendo)
+    total_factores = divisores_primos(numero_dividendo)
+    cantidad_factores = {}    
+    for factor in factores_unicos:
+        cantidad_factores[factor] = total_factores.count(factor)
+    return cantidad_factores        
+
+
 numero = int(input("Ingrese un numero:\t"))
 #print(divisores_primos(numero))
 print(divisores_primos(numero))
 print(lista_primos(numero))
+print(factores_primos(numero))
