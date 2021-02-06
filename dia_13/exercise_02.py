@@ -7,10 +7,8 @@ def evaluar_primos(numero):
 def lista_primos(numero_dividendo):
     primos=[]
     for numero_divisor in range(2, numero_dividendo+1):
-        if numero_dividendo >= 2 and numero_dividendo % numero_divisor == 0 :
-            if numero_divisor in [2,3]:
-                primos.append(numero_divisor)
-            elif evaluar_primos(numero_divisor):
+        if numero_dividendo >= 2 and numero_dividendo % numero_divisor == 0 :            
+            if evaluar_primos(numero_divisor):
                 primos.append(numero_divisor)
     return primos
 
