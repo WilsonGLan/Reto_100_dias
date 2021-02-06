@@ -39,7 +39,11 @@ def factores_primos(numero_dividendo):
 
 
 numero = int(input("Ingrese un numero:\t"))
-#print(divisores_primos(numero))
-print(divisores_primos(numero))
-print(lista_primos(numero))
-print(factores_primos(numero))
+
+if len(lista_primos(numero)) > 1:
+    print("Los factores primos encontrados son los siguientes:\n")
+elif len(lista_primos(numero)) == 1:
+    print("El factor primo es el siguiente:\t")
+
+for factor, exponente in factores_primos(numero).items():
+    print(f"{factor}^{exponente}")
