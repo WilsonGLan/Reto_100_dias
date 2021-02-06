@@ -8,20 +8,28 @@ def evaluar_primos(numero):
     primos=[]
     for numero_divisor in range(2, numero_dividendo):
         if numero_dividendo >= 2 and numero_dividendo % numero_divisor == 0 :
-            if i in [2,3]:
-                primos.append(i)
-            elif evaluar_primos(i):
-                primos.append(i)
+            if numero_divisor in [2,3]:
+                primos.append(numero_divisor)
+            elif evaluar_primos(numero_divisor):
+                primos.append(numero_divisor)
     return primos """
 
 def divisores_primos(numero_dividendo):
-    flag = evaluar_primos(numero_dividendo) 
-    if flag == True: 
-        mensaje = "Es primo"
-    else:
-        mensaje = "No es primo"
-    return mensaje
+    numero_cociente = numero_dividendo
+    lista_primos = []
+    for numero_divisor in range(2,numero_dividendo):
+        if numero_dividendo % numero_divisor == 0:
+            es_primo = evaluar_primos(numero_divisor)         
+            while es_primo:                        
+                lista_primos.append(numero_divisor)
+                numero_cociente = numero_cociente / numero_divisor
+                if numero_cociente % numero_divisor != 0:
+                    es_primo = False
+            if numero_cociente == 0:
+                break
+    return lista_primos
 
 numero = int(input("Ingrese un numero:\t"))
 #print(divisores_primos(numero))
 print(divisores_primos(numero))
+#print(lista_primos(numero))
