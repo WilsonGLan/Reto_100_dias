@@ -15,3 +15,5 @@ Ejercicio 1:
  * Programa que permita conocer los factores primos que pertenecen a un número entregado por el usuario y cuantas veces se repite cada uno.
  * Para realizar este ejercicio se toma en cuenta que los números primos son aquellos que solo son divisibles entre 1 y el mismo número, por lo que si llega a ser divisible por otro numero menor a él mismo entonces no es primo.
  * Se mostrará en pantalla cada factor con su correspondiente exponente
+
+ **Nota:** Leer publicación donde explico más detallado como realice cada uno de los ejercicios: [Blog Dev.to](https://dev.to/wilgutl/reto-dia-13-100-con-python-2kde)
