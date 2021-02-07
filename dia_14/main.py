@@ -1,8 +1,17 @@
 import data as d
 import random as r
 
+ending = False
+score = 0
+
+
 def choice_pokemon():
     return r.choice(d.pokemon_random)
+
+def asignar_puntaje():
+    global score
+    score += 10
+    return score
 
 def winner_pokemon(op):
     experience_a = poke_a["base_experience"]
@@ -10,19 +19,19 @@ def winner_pokemon(op):
 
     if experience_a > experience_b:
         if op == 'a':
-            return f"El ganador es {poke_a['name']} con experiencia {experience_a} y usted obtiene 10 puntos"
+            asignar_puntaje()
+            return f"El ganador es {poke_a['name']} con experiencia {experience_a} y usted obtiene 10 puntos"            
         elif op == 'b':
             return f"El ganador es {poke_a['name']} con experiencia {experience_a} y usted no obtiene puntos"
     elif experience_a < experience_b:
         if op == 'a':
             return f"El ganador es {poke_b['name']} con experiencia {experience_b} y usted no obtiene puntos"
         elif op == 'b':
+            asignar_puntaje()
             return f"El ganador es {poke_b['name']} con experiencia {experience_b} y usted obtiene 10 puntos"
     else:
         return "No hay ganador, es empate"
 
-ending = False
-score = 0
 
 while ending == False:
     poke_a = choice_pokemon()
@@ -41,3 +50,4 @@ while ending == False:
     opcion = input("Si desea continuar escriba 'Si' en caso contrario 'No':\t")
     if opcion.upper() != 'SI':
         ending = True
+        print(f"su puntaje es {score} ")
