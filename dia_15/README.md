@@ -70,3 +70,24 @@ Program Requirements:
   * Milk:50ml
   * Coffee: 76g
   * Money: $2.5
+
+
+  ---
+  # **Ejercicio**
+  ---
+
+  ### Busqueda con algoritmo binario.
+
+  Se realiza la creación de un programa que implementa la busqueda de un número en una lista mediante algoritmo binario que permite enseñar que tan eficiente es al ir dividiendo en dos la cantidad de números opcionales o de elementos disponibles en una lista. Este algoritmo permite hacer menos iteraciones en la busqueda lo que ayuda a la gestión de recursos de sistema. Para probarlo el ejercicio tendrá una lista de números primos, el usuario escogerá del 1 al 100, si se encuentra en la lista el programa dirá en que posición y cuantas veces realizó la busqueda, si no se encuentra en la lista el indice mostrado será -1 por defecto y la cantidad de iteraciones que realizó.
+
+  El pseudocodigo se plantearía de la siguiente manera:
+
+1. Sea min = 0 y max = n-1.
+2. Si max < min, entonces detente: target no está presente en array. Regresa -1.
+3. Calcula guess como el promedio de max y min, redondeado hacia abajo (para que sea un entero).
+4. Si array[guess] es igual a target, entonces detente. ¡Ya lo encontraste! Regresa guess.
+5. Si el intento fue muy bajo, es decir, array[guess] < target, entonces haz min = guess + 1.
+6. De lo contrario, el intento fue muy alto. Haz max = guess - 1.
+7. Regresa al paso 2.
+
+Nota: Este ejercicio esta basado en una lección del curso de algoritmos de Khan Academy y es de allí de donde se obtubo el pseudocódigo. La adaptación al código de python si fue de mi autoría.
