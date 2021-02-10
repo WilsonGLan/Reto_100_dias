@@ -1,59 +1,36 @@
-MENU = {
-    "espresso": {
-        "ingredients": {
-            "water": 50,
-            "coffee": 18,
-        },
-        "cost": 1.5,
-    },
-    "latte": {
-        "ingredients": {
-            "water": 200,
-            "milk": 150,
-            "coffee": 24,
-        },
-        "cost": 2.5,
-    },
-    "cappuccino": {
-        "ingredients": {
-            "water": 250,
-            "milk": 100,
-            "coffee": 24,
-        },
-        "cost": 3.0,
-    }
-}
+#!/usr/bin/python
 
-resources = {
-    "water": 300,
-    "milk": 200,
-    "coffee": 100,
-}
+import data_coffee as data
 
-Water = 100
-Milk = 50
-Coffee = 76
-Money = 2.5
-
+water = 0
+milk = 0
+coffee = 0
+cost = 0
 turn = True
 
+#def espresso_total(order_client):
+    
+
+
 while turn == True:
-    orden = input("what would you like? (espresso/latte/cappuccino):")
 
-    if orden == 'espresso':
-        print("espresso")
-    elif orden == 'latte':
-        print("latte")
-    elif orden == 'cappuccino':
-        print("cappuccino")
+    order = input("what would you like? (espresso/latte/cappuccino):")
+    if order != 'report':
+        #print(data.MENU[orden]["ingredients"])
+        list_ingredients = data.MENU[order]["ingredients"].items()
+        for ingredients, volume in list_ingredients:
+            print(ingredients, "=", volume)
+            #if volume < revisar
+        
 
-
-    print("Report")
-
-    print(f"Water: {Water}ml ")
-    print(f"Milk: {Milk}ml ")
-    print(f"Coffee: {Coffee}ml ")
-    print(f"Money: {Money}ml ")
+    else:
+        water = data.resources["water"] - water
+        milk = data.resources["milk"] - milk
+        coffee = data.resources["coffee"] - coffee
+        
+        print(f"water = {water}")
+        print(f"milk = {milk}")
+        print(f"coffee = {coffee}")
 
     opcion = input("Would you like to continue? Type 'on' for yes or 'off' for not\t")
 
