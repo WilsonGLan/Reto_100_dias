@@ -35,9 +35,20 @@ Milk = 50
 Coffee = 76
 Money = 2.5
 
-print("Reporte")
+turn = True
 
-print(f"Water: {Water}ml ")
-print(f"Milk: {Milk}ml ")
-print(f"Coffee: {Coffee}ml ")
-print(f"Money: {Money}ml ")
+while turn == True:
+    print("what would you like? (espresso/latte/cappuccino):")
+
+
+    print("Reporte")
+
+    print(f"Water: {Water}ml ")
+    print(f"Milk: {Milk}ml ")
+    print(f"Coffee: {Coffee}ml ")
+    print(f"Money: {Money}ml ")
+
+    opcion = input("Would you like to continue? Type 'on' for yes or 'off' for not\t")
+
+    if opcion == 'off':
+        turn = False
