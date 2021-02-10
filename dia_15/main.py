@@ -29,3 +29,15 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
+
+Water = 100
+Milk = 50
+Coffee = 76
+Money = 2.5
+
+print("Reporte")
+
+print(f"Water: {Water}ml ")
+print(f"Milk: {Milk}ml ")
+print(f"Coffee: {Coffee}ml ")
+print(f"Money: {Money}ml ")
