@@ -7,7 +7,7 @@ Program Requirements:
 5. Make coffe
 
 
-1. Prompt user by asking "what would you like? (espresso/latte/cappuccino)L:"
+1. Prompt user by asking "what would you like? (espresso/latte/cappuccino):"
 
   a. Check the user's input to decide what to do next.
 
