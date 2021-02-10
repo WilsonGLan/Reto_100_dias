@@ -38,10 +38,17 @@ Money = 2.5
 turn = True
 
 while turn == True:
-    print("what would you like? (espresso/latte/cappuccino):")
+    orden = input("what would you like? (espresso/latte/cappuccino):")
+
+    if orden == 'espresso':
+        print("espresso")
+    elif orden == 'latte':
+        print("latte")
+    elif orden == 'cappuccino':
+        print("cappuccino")
 
 
-    print("Reporte")
+    print("Report")
 
     print(f"Water: {Water}ml ")
     print(f"Milk: {Milk}ml ")
