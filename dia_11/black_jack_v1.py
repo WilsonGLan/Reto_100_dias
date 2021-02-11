@@ -61,81 +61,83 @@
 
 import random as r
 import art as a
-import  cleaning as cl
+import cleaning as cl
+
 
 def deal_card():
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     return r.choice(cards)
+
 
 def calculate_score(hand):
     score = 0
     if sum(hand) > 21 and 11 in hand:
         hand.remove(11)
         hand.append(1)
-        score = sum(hand)
+        return sum(hand)
     elif sum(hand) == 21 and len(hand) == 2:
-        score = 0
+        return 0
     else:
-        score = sum(hand)
-    return score
+        return sum(hand)
+
 
 def compare(score_user, score_computer):
     if score_user == score_computer:
-        message = """
+        return """
         ============================================
         =       DRAW                               =
         ============================================
         """
-        return message
+
     elif score_computer == 0:
-        message = """
+        return """
         ============================================
         =       You Lose, opponent has BlackJack   =
         ============================================
         """
-        return message
+
     elif score_user == 0:
-        message = """
+        return """
         ============================================
         =       You win, with a BlackJack          =
         ============================================
         """
-        return message
+
     elif score_user > 21:
-        message = """
+        return """
         ============================================
         =       You went over. You lose            =
         ============================================
         """
-        return message
+
     elif score_computer > 21:
-        message = """
+        return """
         ============================================
         =       Opponent went over. You win        =
         ============================================
         """
-        return message
+
     elif score_user > score_computer:
-        message = """
+        return """
         ============================================
         =       You win                            =
         ============================================
         """
-        return message
+
     else:
-        message = """
+        return """
         ============================================
         =       You lose                           =
         ============================================
         """
-        return message
+
 
 def play_game():
     user_cards = []
     computer_cards = []
     game_over = False
 
-    for i in range(2):
+    for _ in range(2):
         user_cards.append(deal_card())
         computer_cards.append(deal_card())
 
@@ -165,9 +167,9 @@ def play_game():
     print(f"    Your Cards: {user_cards}, current score {score_user} ")
     print(f"    Computer first card: {computer_cards}, current score {score_computer}")
 
+
 cl.clean_screen()
 print(a.logo)
 while input("Do you want to play a game BlackJack? Type 'y' or 'n': ") == 'y':
     cl.clean_screen()
     play_game()
-
