@@ -1,4 +1,4 @@
 {
-    "python.autoComplete.extraPaths": [        
-        "home/python_prueba/"]
+    "python.autoComplete.extraPaths": [
+        "home/python_prueba/practica_reto_cien_dias/"]
 }
