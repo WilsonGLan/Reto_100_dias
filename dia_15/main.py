@@ -2,9 +2,6 @@
 
 import data_coffee as data
 
-water = 0
-milk = 0
-coffee = 0
 cost = 0
 turn = True
 apply = True
@@ -14,6 +11,7 @@ while turn:
     order = input("what would you like? (espresso/latte/cappuccino):")
     if order in ['espresso', 'latte', 'cappuccino']:        
         list_ingredients = data.MENU[order]["ingredients"].items()
+        cost = data.MENU[order]["cost"]
         for ingredients, volume in list_ingredients:
             print(ingredients, "=", data.resources[ingredients])            
             if volume > data.resources[ingredients]:
@@ -26,12 +24,14 @@ while turn:
             for ingredient_temporal, total in elements_temporary:
                 final_total = data.resources[ingredient_temporal] - total
                 data.resources[ingredient_temporal] = final_total
-                print(ingredient_temporal, "=", data.resources[ingredient_temporal])
+                #print(ingredient_temporal, "=", data.resources[ingredient_temporal])
+        
                 
     elif order == 'report':
         list_report = data.resources.items()
         for ingredients, volume in list_report:
-            print(ingredients, "=", data.resources[ingredients])  
+            print(ingredients, "=", data.resources[ingredients])
+        print(f"Cost = {cost}")
     else:
         print("ha ingresado una opción incorrecta")
 
