@@ -14,22 +14,21 @@ turn = True
 while turn:
 
     order = input("what would you like? (espresso/latte/cappuccino):")
-    if order != 'report':
+    if order in ['espresso', 'latte', 'cappuccino']:
         # print(data.MENU[orden]["ingredients"])
         list_ingredients = data.MENU[order]["ingredients"].items()
         for ingredients, volume in list_ingredients:
             print(ingredients, "=", volume)
             # if volume < revisar
-
-
-    else:
+    elif order == 'report':
         water = data.resources["water"] - water
         milk = data.resources["milk"] - milk
         coffee = data.resources["coffee"] - coffee
-
         print(f"water = {water}")
         print(f"milk = {milk}")
         print(f"coffee = {coffee}")
+    else:
+        print("ha ingresado una opción incorrecta")
 
     opcion = input("Would you like to continue? Type 'on' for yes or 'off' for not\t")
 
