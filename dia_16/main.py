@@ -17,6 +17,8 @@ my_screen = Screen()
 # print(my_screen.canvheight)
 my_screen.exitonclick() # La ventana se cierra hasta que se haga un click
 
+
+#Probando el módulo prettytable para usar tablas con resultados
 table = PrettyTable()
 
 table.add_column("Pokemon", ["Pikachu", "Squirtle", "Charmander"], align="l")
