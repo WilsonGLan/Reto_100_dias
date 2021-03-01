@@ -24,32 +24,17 @@ tim.color("green")
 #turtle_square()
 
 """ Dibuja una linea segmentada """
-for _ in range(30):
-    dashed_line(10,10)
+#for _ in range(30):
+#    dashed_line(10,10)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+""" Dibujar figuras geometricas partiendo desde el mismo origen y cada una con un lado adicional """
+for sides in range(3,8):
+    grade = 360/sides
+    for _ in range(sides):
+        tim.forward(100)
+        tim.right(grade)
 
 
 
