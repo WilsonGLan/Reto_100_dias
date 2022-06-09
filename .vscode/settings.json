@@ -23,5 +23,8 @@
         "terminal.ansiRed": "#FB0120",
         "terminal.ansiWhite": "#E0E0E0",
         "terminal.ansiYellow": "#FDA331"
-    }
+    },
+    "python.analysis.extraPaths": [
+        "home/python_prueba/practica_reto_cien_dias/"
+    ]
 }
