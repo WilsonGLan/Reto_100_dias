@@ -23,8 +23,12 @@ game_is_on = True
 while game_is_on:
     screen.update()
     time.sleep(0.1)
-    for seg in segments:
-        seg.forward(20)
+    # en el range se simula el start, stop y step
+    for seg_nums in range(len(segments) - 1, 0, -1):
+        new_x = segments[seg_nums - 1].xcor()
+        new_y = segments[seg_nums - 1].ycor()
+        segments[seg_nums].goto(new_x, new_y)
+    segments[0].forward(20)
 
 
 
