@@ -1,6 +1,8 @@
-from turtle import Screen, Turtle
+from turtle import Screen
 from snake import Snake
 import time
+
+from food import Food
 
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -9,6 +11,7 @@ screen.title("My snake game")
 screen.tracer(0)
 
 snake =Snake()
+food = Food()
 
 screen.listen() # Escucha la pulsacion de las teclas
 screen.onkey(snake.up,"Up")
