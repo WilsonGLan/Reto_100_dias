@@ -18,11 +18,18 @@ class Snake:
 
     def create_snake(self):
         for position in STARTING_POSITIONS:
-            new_segment = Turtle("square")
-            new_segment.color("white")
-            new_segment.penup() # evita que deje la marca de linea al mover
-            new_segment.goto(position)
-            self.segments.append(new_segment)
+            self.add_segment(position)
+
+    def add_segment(self, position):
+        new_segment = Turtle("square")
+        new_segment.color("white")
+        new_segment.penup() # evita que deje la marca de linea al mover
+        new_segment.goto(position)
+        self.segments.append(new_segment)
+
+    def extend(self):
+        # add a new segment to the snake
+        self.add_segment(self.segments[-1].position())
 
     def move(self):
         # en el range se simula el start, stop y step
