@@ -6,3 +6,6 @@ dia_16/venv/lib/python3.8/site-packages/yaml/
 dia_16/venv/
 dia_17/.idea/
 dia_17/venv/
+
+# files zip
+*.zip
