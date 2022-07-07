@@ -1,4 +1,3 @@
-from cgitb import text
 from tkinter import *
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
@@ -26,11 +25,19 @@ canvas = Canvas(width=200, height=224, bg=YELLOW)
 tomato_img=PhotoImage(file="tomato.png")
 canvas.create_image(102, 112, image=tomato_img)
 canvas.create_text(103, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
-canvas.pack()
+canvas.grid(column=1, row= 1)
 
+buttonStart = Button(text="Start", highlightthickness=0)
+buttonStart.grid(column=0, row=3)
 
+buttonReset = Button(text="Reset", highlightthickness=0)
+buttonReset.grid(column=2, row=3)
 
+labelTitle = Label(text="TIMER", font=(FONT_NAME, 36, "bold"), fg=GREEN, bg= YELLOW)
+labelTitle.grid(column=1, row= 0)
 
+labelCheck = Label(text="✔", font=(FONT_NAME, 24, "bold"), fg=GREEN, bg= YELLOW)
+labelCheck.grid(column=1, row= 4)
 
 
 
