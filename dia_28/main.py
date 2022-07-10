@@ -14,12 +14,15 @@ LONG_BREAK_MIN = 20
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
-    count_down(5)
+    count_down(300)
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def count_down(count):
     count_min = math.floor(count / 60)
     count_seg = count % 60
+
+    if count_seg < 10 and count_seg >= 0:
+        count_seg = "0"+str(count_seg)
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_seg}")
     if count > 0:
         window.after(1000, count_down, count - 1)
