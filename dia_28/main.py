@@ -1,5 +1,6 @@
 import math
 from tkinter import *
+
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
 RED = "#e7305b"
@@ -10,8 +11,18 @@ WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
+timer = None
 
 # ---------------------------- TIMER RESET ------------------------------- #
+
+def reset_timer():
+    window.after_cancel(timer)
+    canvas.itemconfig(timer_text, text="00:00")
+    labelTitle.config(text="Timer")
+    labelCheck.config(text="")
+    global reps
+    reps = 0
+
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
@@ -38,11 +49,19 @@ def count_down(count):
 
     if count_seg < 10 and count_seg >= 0:
         count_seg = "0"+str(count_seg)
+
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_seg}")
+
     if count > 0:
-        window.after(1000, count_down, count - 1)
+        global timer
+        timer = window.after(1000, count_down, count - 1)
     else:
         start_timer()
+        mark = ""
+        work_sessions = math.floor(reps / 2)
+        for _ in range(work_sessions):
+            mark += "✔"
+        labelCheck.config(text=mark)
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
@@ -58,7 +77,7 @@ canvas.grid(column=1, row= 1)
 buttonStart = Button(text="Start", highlightthickness=0, command=start_timer)
 buttonStart.grid(column=0, row=3)
 
-buttonReset = Button(text="Reset", highlightthickness=0)
+buttonReset = Button(text="Reset", highlightthickness=0, command=reset_timer)
 buttonReset.grid(column=2, row=3)
 
 labelTitle = Label(text="TIMER", font=(FONT_NAME, 36, "bold"), fg=GREEN, bg= YELLOW)
